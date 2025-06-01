@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hotelsansthan.com/sitemap.xml 

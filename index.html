@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Hotel Sansthan Dakshini Rajasthan - Official website of the premier hotel union in South Rajasthan. Join our network of prestigious hotels to promote tourism and hospitality excellence in Udaipur and surrounding regions.">
+  <meta name="keywords" content="hotel sansthan, dakshini rajasthan, hotel union, udaipur hotels, rajasthan tourism, hospitality network, south rajasthan hotels, hotel association udaipur, mewar hotels, hotel owners association rajasthan">
+  <meta name="author" content="Hotel Sansthan Dakshini Rajasthan">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow">
+  <meta property="og:title" content="Hotel Sansthan Dakshini Rajasthan - South Rajasthan's Premier Hotel Union">
+  <meta property="og:description" content="Join the prestigious network of hotels in South Rajasthan. Promoting tourism and hospitality excellence in Udaipur and surrounding regions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hotelsansthan.com">
+  <meta property="og:image" content="images/hsdr-logo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hotel Sansthan Dakshini Rajasthan">
+  <meta name="twitter:description" content="Official website of the premier hotel union in South Rajasthan. Join our network of prestigious hotels.">
+  <meta name="twitter:image" content="images/hsdr-logo.jpg">
+  <link rel="canonical" href="https://hotelsansthan.com" />
+  
+  <title>Hotel Sansthan Dakshini Rajasthan - South Rajasthan's Premier Hotel Union</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face {
+      font-family: 'Monotype Corsiva';
+      src: local('Monotype Corsiva'),
+           local('MTCORSVA'),
+           url('https://db.onlinewebfonts.com/t/05289e866fe7e1e99d27a7a31f8d3b66.woff2') format('woff2');
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo-container div h1 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .logo-img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      background-color: white;
+      padding: 4px;
+      border-radius: 8px;
+    }
+    .corsiva-font {
+      font-family: 'Monotype Corsiva', 'MTCORSVA', cursive;
+      font-size: 3.5rem;
+      line-height: 1.2;
+    }
+    .section-transition {
+      transition: all 0.3s ease-in-out;
+    }
+    .contact-link {
+      transition: color 0.2s ease;
+    }
+    .nav-link {
+      transition: color 0.2s ease;
+      padding: 0.5rem 1rem;
+    }
+    .nav-link.register-btn {
+      background-color: #EAB308;
+      color: white;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .nav-link.register-btn:hover {
+      background-color: #CA8A04;
+      color: white;
+    }
+    .slideshow {
+      position: relative;
+      background: #000;
+    }
+    .slide {
+      display: none;
+    }
+    .slide.active {
+      display: block;
+    }
+    .slide-nav {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 16px;
+      font-weight: bold;
+      font-size: 24px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 10;
+    }
+    .slide-nav:hover {
+      background: rgba(59, 130, 246, 0.8);
+    }
+    .slide-nav.prev {
+      left: 10px;
+    }
+    .slide-nav.next {
+      right: 10px;
+    }
+    .slide-dots {
+      position: absolute;
+      bottom: 60px;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+    .slide-dot {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .slide-dot.active {
+      background-color: #3B82F6;
+    }
+    .section-light {
+      background-color: #ffffff;
+    }
+    .section-gray {
+      background-color: #f8fafc;
+    }
+    .section-dark {
+      background-color: #f1f5f9;
+    }
+    .footer {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      padding: 1.5rem 0;
+      font-size: 0.875rem;
+    }
+    .hsdr-text {
+      color: #EAB308;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px;
+      height: 300px;
+      background-image: url('images/hsdr-logo.jpeg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.45;
+      z-index: 1;
+      filter: contrast(120%) brightness(90%);
+    }
+    .cities-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      font-weight: 500;
+      color: #3B82F6;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      margin-top: 1.5rem;
+    }
+    .welcome-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .welcome-text .welcome {
+      font-size: 2.75rem;
+      color: #1a365d;
+    }
+    .welcome-text .org-name {
+      font-size: 4rem;
+      line-height: 1.2;
+    }
+
+    /* Mobile Responsive Enhancements */
+    @media (max-width: 768px) {
+      .logo-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+      .logo-img {
+        width: 80px;
+        height: 80px;
+      }
+      nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #1a1a1a;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+      }
+      nav.active {
+        display: flex;
+      }
+      .nav-link {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .welcome-text .welcome {
+        font-size: 2rem;
+      }
+      .welcome-text .org-name {
+        font-size: 2.75rem;
+      }
+      .cities-list {
+        font-size: 0.75rem;
+      }
+      .hero-section::before {
+        width: 220px;
+        height: 220px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.2;
+      }
+    }
+
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+      display: none;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1001;
+      background: #EAB308;
+      padding: 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .hero-section {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .cities-list span:not(:last-child)::after {
+      content: '•';
+      margin: 0 0.5rem;
+      color: #60A5FA;
+    }
+    .member-card {
+      max-width: 192px;
+      text-align: center;
+    }
+    .member-photo {
+      width: 192px;
+      height: 192px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+    }
+    .member-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      min-height: 5rem;
+    }
+    .member-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1a365d;
+      margin: 0;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0 0.25rem;
+    }
+    .member-name.long-name {
+      font-size: 0.85rem;
+      letter-spacing: -0.2px;
+    }
+    .member-name.short {
+      font-size: 1.125rem;
+    }
+    .member-role {
+      font-size: 0.875rem;
+      color: #4B5563;
+      margin: 0;
+    }
+    .member-hotel {
+      font-size: 0.875rem;
+      color: #3B82F6;
+      font-weight: 500;
+      margin: 0;
+      margin-bottom: 0.25rem;
+    }
+    .member-phone {
+      font-size: 0.875rem;
+      color: #4B5563;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+    }
+    .member-phone svg {
+      width: 1rem;
+      height: 1rem;
+    }
+    .member-phone a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .member-phone a:hover {
+      color: #3B82F6;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+
+  <!-- Header / Navbar -->
+  <header class="bg-gray-900 text-white">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="logo-container">
+        <img src="images/hsdr-logo.jpeg" alt="HSDR Logo" class="logo-img">
+        <div>
+          <h1 class="text-xl font-bold">Hotel Sansthan Dakshini Rajasthan <span class="hsdr-text">(HSDR)</span></h1>
+        </div>
+      </div>
+      <nav class="flex items-center space-x-6">
+        <a href="#" class="nav-link hover:text-yellow-400">Home</a>
+        <a href="#about" class="nav-link hover:text-yellow-400">About Us</a>
+        <a href="#contact" class="nav-link hover:text-yellow-400">Contact</a>
+        <a href="#registration" class="nav-link register-btn hover:bg-yellow-600" onclick="scrollToRegistration()">Registration</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center py-20 section-light">
+    <div class="container mx-auto px-4 hero-content">
+      <div class="welcome-text corsiva-font">
+        <span class="welcome">Welcome to</span>
+        <span class="org-name" style="color: #1a365d;">Hotel Sansthan Dakshini Rajasthan</span>
+      </div>
+      <div class="cities-list mb-6 mt-4">
+        <span>UDAIPUR</span>
+        <span>DUNGARPUR</span>
+        <span>BANSWARA</span>
+        <span>RAJSAMAND</span>
+        <span>PRATAPGARH</span>
+        <span>CHITTORGARH</span>
+        <span>SALUMBER</span>
+      </div>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+        A united platform for hotels in South Rajasthan. Join us to build a stronger hospitality network, promote tourism, and collaborate for excellence.
+      </p>
+    </div>
+  </section>
+
+  <!-- Organization Members Section -->
+  <section class="relative py-16 section-gray">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Our Organization</h2>
+      <div class="relative max-w-4xl mx-auto">
+        <div class="slideshow rounded-lg shadow-xl overflow-hidden">
+          <!-- Slide 1 -->
+          <div class="slide active">
+            <img src="images/organization-members.jpeg" alt="Hotel Sansthan Dakshini Rajasthan Members 1" class="w-full h-auto max-h-[500px] object-contain">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+              <p class="text-white text-lg text-center">United for the Growth of Hospitality in Mewar Region</p>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="slide">
+            <img src="images/organization-2.jpeg" alt="Hotel Sansthan Dakshini Rajasthan Members 2" class="w-full h-auto max-h-[500px] object-contain">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+              <p class="text-white text-lg text-center">Working Together for Excellence in Hospitality</p>
+            </div>
+          </div>
+          
+          <!-- Slide 3 -->
+          <div class="slide">
+            <img src="images/organization-3.jpeg" alt="Hotel Sansthan Dakshini Rajasthan Members 3" class="w-full h-auto max-h-[500px] object-contain">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+              <p class="text-white text-lg text-center">Building a Stronger Hospitality Network</p>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slide">
+            <img src="images/WhatsApp Image 2025-06-01 at 13.38.16_b4507859.jpg" alt="Hotel Sansthan Dakshini Rajasthan Members 4" class="w-full h-auto max-h-[500px] object-contain">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+              <p class="text-white text-lg text-center">Collaborating for Regional Tourism Development</p>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <a class="slide-nav absolute left-0 top-1/2 -translate-y-1/2 px-4 py-2 text-white text-4xl font-bold" onclick="changeSlide(-1)">❮</a>
+          <a class="slide-nav absolute right-0 top-1/2 -translate-y-1/2 px-4 py-2 text-white text-4xl font-bold" onclick="changeSlide(1)">❯</a>
+        </div>
+        
+        <!-- Dots Navigation -->
+        <div class="text-center mt-4">
+          <span class="slide-dot active" onclick="currentSlide(1)"></span>
+          <span class="slide-dot" onclick="currentSlide(2)"></span>
+          <span class="slide-dot" onclick="currentSlide(3)"></span>
+          <span class="slide-dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-16 section-light">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
+      <div class="space-y-6 text-left">
+        <p class="text-gray-700 leading-relaxed">
+          Established in 2019, Hotel Sansthan Dakshini Rajasthan is a hotel owners' association representing the hospitality industry across the seven districts of Southern Rajasthan—Udaipur, Dungarpur, Banswara, Rajsamand, Pratapgarh, Chittorgarh, and Salumber—collectively known as the Mewar region.
+        </p>
+        
+        <p class="text-gray-700 leading-relaxed">
+          The association is committed to protecting the rights of hotel owners, promoting responsible tourism growth, and ensuring the sustainable development of the hospitality sector in this culturally rich region.
+        </p>
+        
+        <p class="text-gray-700 leading-relaxed">
+          Led by hotel owners, our Executive Committee brings together local experience, unity, and a shared vision. We also serve as a bridge between government authorities and the hotel industry, keeping members updated on policies, schemes, compliance rules, and tourism-related opportunities.
+        </p>
+        
+        <p class="text-gray-700 leading-relaxed">
+          Our mission is to build a strong, unified voice for hoteliers and to elevate the Mewar region as a premier tourism destination in India.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Management Committee Section -->
+  <section class="py-16 section-dark">
+    <div class="container mx-auto px-4 max-w-6xl text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">Management Committee</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
+        <!-- President -->
+        <div class="member-card">
+          <img 
+            src="images/WhatsApp Image 2025-06-01 at 13.58.55_ffab54c2.jpg" 
+            alt="Mr. Subhash Singh Ranawat" 
+            class="member-photo" 
+            style="object-position: center 15%;"
+          >
+          <div class="member-details">
+            <h3 class="member-name long-name">Mr. Subhash Singh Ranawat</h3>
+            <p class="member-role">President</p>
+            <p class="member-hotel">Kankarwa Haveli</p>
+            <p class="member-phone">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <a href="tel:+919413595081">94135 95081</a>
+            </p>
+          </div>
+        </div>
+        
+        <!-- Vice President -->
+        <div class="member-card">
+          <img 
+            src="images/WhatsApp Image 2025-06-01 at 14.06.51_bc1cae86.jpg" 
+            alt="Mr. KP Agrawal" 
+            class="member-photo" 
+            style="object-position: center 10%;"
+          >
+          <div class="member-details">
+            <h3 class="member-name">Mr. KP Agrawal</h3>
+            <p class="member-role">Vice President</p>
+            <p class="member-hotel">Hotel Parn Kuti</p>
+            <p class="member-phone">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <a href="tel:+919829966314">98299 66314</a>
+            </p>
+          </div>
+        </div>
+        
+        <!-- Secretary -->
+        <div class="member-card">
+          <img src="images/rakesh-choudhary.jpeg" alt="Mr. Rakesh Choudhary" class="member-photo">
+          <div class="member-details">
+            <h3 class="member-name">Mr. Rakesh Choudhary</h3>
+            <p class="member-role">Secretary</p>
+            <p class="member-hotel">Hotel Navjeevan Palace</p>
+            <p class="member-phone">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <a href="tel:+919828027795">98280 27795</a>
+            </p>
+          </div>
+        </div>
+        
+        <!-- Joint Secretary -->
+        <div class="member-card">
+          <img 
+            src="images/WhatsApp Image 2025-06-01 at 14.06.35_cb7fb845.jpg" 
+            alt="Mr. Prafull Singh Kumawat" 
+            class="member-photo" 
+            style="object-position: center 15%;"
+          >
+          <div class="member-details">
+            <h3 class="member-name long-name">Mr. Prafull Singh Kumawat</h3>
+            <p class="member-role">Joint Secretary</p>
+            <p class="member-hotel">Hotel Ashok</p>
+            <p class="member-phone">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <a href="tel:+919309457799">93094 57799</a>
+            </p>
+          </div>
+        </div>
+        
+        <!-- Treasurer -->
+        <div class="member-card">
+          <img src="images/ambalal-sahu.jpeg" alt="Mr. Ambalal Sahu" class="member-photo">
+          <div class="member-details">
+            <h3 class="member-name">Mr. Ambalal Sahu</h3>
+            <p class="member-role">Treasurer</p>
+            <p class="member-hotel">Hotel Shree Amrit Palace</p>
+            <p class="member-phone">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <a href="tel:+919950500769">99505 00769</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Form Section -->
+  <section id="registration" class="py-16 section-gray">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Registration Form</h2>
+      <p class="text-gray-600 text-lg mb-8">
+        Download our registration form to join Hotel Sansthan Dakshini Rajasthan.
+      </p>
+      <div class="flex justify-center">
+        <a href="static/files/registration-form.pdf" 
+           class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-150 ease-in-out"
+           target="_blank"
+           download
+           onclick="window.open('static/files/registration-form.pdf', '_blank')">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          Download Registration Form
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 section-light">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Contact Us</h2>
+      <p class="text-gray-700 mb-8">
+        Get in touch with us for any inquiries or assistance.
+      </p>
+
+      <div class="text-left space-y-4 text-gray-700 max-w-2xl mx-auto">
+        <div class="flex items-start">
+          <svg class="w-6 h-6 text-blue-600 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <div>
+            <strong class="block text-gray-800 mb-1">Address/Regd.Off:</strong>
+            <span class="contact-link">Hotel Shree Amrit Palace, Surajpole, Udaipur (Raj.)</span>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <svg class="w-6 h-6 text-blue-600 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          <div>
+            <strong class="block text-gray-800 mb-1">Email:</strong>
+            <a href="mailto:hsdr100393@gmail.com" class="contact-link text-blue-600 hover:underline">hsdr100393@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <svg class="w-6 h-6 text-blue-600 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          <div>
+            <strong class="block text-gray-800 mb-1">Contact:</strong>
+            <a href="tel:+919828027795" class="contact-link text-blue-600 hover:underline">+91 9828027795</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2024 Hotel Sansthan Dakshini Rajasthan. All rights reserved.</p>
+      <p class="mt-2 text-gray-400">Promoting Excellence in Hospitality Across the Mewar Region</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu functionality
+    function toggleMobileMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+
+    // Slideshow functionality
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function changeSlide(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("slide-dot");
+      
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].classList.remove("active");
+      }
+      
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].classList.add("active");
+    }
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('nav').classList.remove('active');
+      });
+    });
+
+    // Automatic slideshow
+    setInterval(() => {
+      changeSlide(1);
+    }, 5000);
+
+    function scrollToRegistration() {
+      const registrationSection = document.getElementById('registration');
+      registrationSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html> 
